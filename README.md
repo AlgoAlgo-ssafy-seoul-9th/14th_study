@@ -129,7 +129,8 @@ def fall(cluster_lst):
                 break
 
             x += 1
-
+        if x+1 != R-1 and [x+1, y] in cluster_lst:
+            continue
         if cnt < falling_length and cnt != 0:
             falling_length = cnt
 
@@ -203,6 +204,7 @@ for _ in range(N):
                 mineral_down(H, i)
                 break
         else:
+            left_or_right = not left_or_right
             continue
     else:
         for i in range(C-1, -1, -1):
@@ -211,6 +213,7 @@ for _ in range(N):
                 mineral_down(H, i)
                 break
         else:
+            left_or_right = not left_or_right
             continue
 
     left_or_right = not left_or_right
