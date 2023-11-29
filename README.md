@@ -50,6 +50,25 @@ print(cnt)
 ### [병국](./흙길%20보수하기/병국.py)
 
 ```py
+n,l = map(int,input().split())
+# n 물웅덩이개수, l 널빤지 길이
+board = [list(map(int,input().split())) for _ in range(n)]
+board.sort()
+maxx = board[-1][-1]
+cnt = 0
+now = board[0][0]
+for i in range(len(board)):
+    start,end = board[i][0], board[i][1]
+    if start > now:
+        now = start
+    while True:
+        if now>=end:
+            break
+        else:
+            now += l
+            cnt += 1
+print(cnt)
+
 
 
 ```
@@ -86,7 +105,7 @@ print(cnt)
 <summary>접기/펼치기</summary>
 <div markdown="1">
 
-## [민웅](<./미네랄/민웅.py>)
+## [민웅](./미네랄/민웅.py)
 
 ```py
 # 2933_미네랄_minerals
@@ -201,26 +220,26 @@ for c in cave:
 
 ```
 
-## [병국](<./미네랄/병국.py>)
+## [병국](./미네랄/병국.py)
 
 ```py
 
 ```
 
-## [상미](<./미네랄/상미.py>)
+## [상미](./미네랄/상미.py)
 
 ```py
 
 
 ```
 
-## [서희](<./미네랄/서희.py>)
+## [서희](./미네랄/서희.py)
 
 ```py
 
 ```
 
-## [성구](<./미네랄/성구.py>)
+## [성구](./미네랄/성구.py)
 
 ```py
 
